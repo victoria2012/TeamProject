@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Welcome to the POP-Stock</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+    <!-- {% static 'css/styles.css' %} -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="{% static 'assets/css/styles.css' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: POP - v4.3.0
+  * Template URL: https://bootstrapmade.com/POP-free-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    
+    <!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+<script type="text/javascript">
+</script>
+    <!--  -->
+<style>
+    div#naver {position:relative; border:1px solid silver; width:600px; height:300px; overflow:hidden; } 
+    iframe#naver {position:relative; top:-150px;left:-350px; border-width:0px}   
+    ul#suggestion_box{
+        margin-left:20px;
+        list-style: none;
+        background-color:white;
+        width:600px;
+     }
+
+    .floating-menu {
+        font-family: sans-serif;
+        background: #f4511e;
+        padding: 5px;;
+        width: 180px;
+        z-index: 100;
+        position: fixed;
+        bottom: 60%;
+        right: 0px;
+      }
+
+      .floating-menu li#float {
+        font-size: 0.9em;
+        display: block;
+        margin: 0 0.5em;
+        color: white;
+      }
+
+      .floating-menu h3 {
+        font-size: 2em;
+        display: block;
+        margin: 0 0.5em;
+        color: white;
+      }
+
+</style>
+</head>
+    
+<link href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css" rel="stylesheet">
+<script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>        
+    
+    
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'assets/js/scripts.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'assets/demo/chart-area-demo.js' %}"></script>
+<script src="{% static 'assets/demo/chart-bar-demo.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="{% static 'assets/js/datatables-simple-demo.js' %}"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+<link href="{% static 'assets/css/styles2.css' %}" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+
+    
+<body>
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:jds88guy@gmail.com">문의하기</a></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1><a href="{% url 'index' %}">POP-Stock</a></h1>
+      </div>
+    
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background: url({% static 'assets/img/slide/slide-5.png' %});background-size: cover;">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown"><span>팝스탁</span> 에 오신것을 환영합니다.</h2>
+                  <h6>읽으면 머리아픈 경제뉴스, AI 가 분석해 드립니다.</h6><br>
+                  <h6>경제뉴스를 통해 <span>오늘의 주가를 예상하는 AI 주가 예측 서비스!</span> </h6><br>
+                  <h6>급변하는 주식시장에서 주가의 흐름을 읽어보세요. </h6>
+                  <br>
+                      <!-- 검색어 추천 https://note.espriter.net/1149 -->
+                    <div class="input-group col-md-4">
+                        <input style="width:100px;" onkeyup="search();" class="form-control py-2 border-right-0 border" placeholder="종목명 검색"  type="search" id="search">     
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary border-left-0 border" type="button" id="btn_search">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                  <div class="row">
+                      <ul id="suggestion_box">
+                      </ul>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- plot chart html save https://frhyme.github.io/python-libs/plt_mpld3/ -->
+    <!-- ======= Featured Section ======= -->
+    <section></section>
+    <section></section>  
+    <section id="featured" class="featured">
+      <div class="container">
+        <div class="section-title">
+          <h2>주요 지수</h2>
+        </div>
+        <div class="row">
+         <div class="col-lg-6">
+           <h2 align="center">KOSPI</h2>
+             <iframe src="{% url 'graph_ks11' %}" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;" scrolling="no" ></iframe>
+          </div>
+          <div class="col-lg-6">
+            <h2 align="center">KOSDAQ</h2>
+             <iframe src="{% url 'graph_kq11' %}" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;" scrolling="no"  ></iframe>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <div class="section-title">
+          <h2>주요 이슈</h2>
+            </div>
+            <div class="row">
+            <div class="col-lg-6">
+                <!-- <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%"> -->
+                    <!-- <table id="datatablesSimple2" class="table table-hover" cellspacing="0" width="100%" border="2px"> -->
+                <table
+  id="table"
+  data-toggle="table"
+  data-search="true"
+  data-pagination="true"
+  >
+                        <thead>
+                            <tr>
+                                <th data-sortable="true" style="text-align:center">종목</th>
+                                <th data-sortable="true" style="text-align:center">종가</th>
+                                <th data-sortable="true" style="text-align:center">등락</th>
+                                <th data-sortable="true" style="text-align:center">거래량</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for stock_sugg in stock_sugg_list %}
+                            {% if stock_sugg.change > 0 %}
+                                <tr class="table-danger" onClick="window.open('{{stock_sugg.link}}','','')">
+                            {% else %}
+                                <tr class="table-primary" onClick="window.open('{{stock_sugg.link}}','','')">
+                            {% endif %}
+                          <td align="center">{{stock_sugg.stock}}</td>
+                          <td align="center">{{stock_sugg.close}}</td>
+                          <td align="center">{{stock_sugg.change_disp}}</td>
+                          <td align="center">{{stock_sugg.volume}}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+            <div class="col-lg-6">
+              <figure class="highcharts-figure">
+                    <div id="container_bubble"></div>
+                </figure>
+            </div>
+          </div>
+          <br>
+            <div class="container">
+              <div class="section-title">
+                <h2>장중 특징주</h2>
+                 <div class="card-body">
+                </div>
+              </div>
+            </div>
+          <div class="col-lg">
+                <table id="datatablesSimple" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center">제목</th>
+                                <th style="text-align:center">게시일자</th>
+                                <th style="text-align:center">게시시간</th>
+                                <th style="text-align:center">종목</th>
+                                <th style="text-align:center">언론사</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for article in articles %}
+                        <tr onClick="window.open('{{article.link}}','','')">
+                          <td> {{article.title}} </td>
+                          <td>{{article.date}}</td>
+                          <td>{{article.time}}</td>
+                          <td>{{article.stock}}</td>
+                          <td>{{article.press}}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </section><!-- End Featured Section -->
+
+    <nav class="floating-menu">
+    <h3>오늘의 AI 추천 종목</h3>
+     <ul>
+    {% for ai in ai_sugg %}
+<!--    <h5 id="float">{{ai}}</h5>-->
+         <li id="float">{{ai}}</li>
+    {% endfor %}
+     </ul>
+  </nav>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+            
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Eterna</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>POP-STOCK</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
+        Designed by <a href="jds88guy@gmail.com">ETHAN.JEONG</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script type="text/javascript">
+
+    var text = "'{{stock_list}}'";
+    var lines = text.split(/[,\. ]+/g),
+        data = Highcharts.reduce(lines, function (arr, word) {
+            var obj = Highcharts.find(arr, function (obj) {
+                return obj.name === word;
+            });
+            if (obj) {
+                obj.weight += 1;
+            } else {
+                obj = {
+                    name: word,
+                    weight: 1
+                };
+                arr.push(obj);
+            }
+            return arr;
+        }, []);
+
+    Highcharts.chart('container_bubble', {
+        accessibility: {
+            screenReaderSection: {
+                beforeChartFormat: '<h5>{chartTitle}</h5>' +
+                    '<div>{chartSubtitle}</div>' +
+                    '<div>{chartLongdesc}</div>' +
+                    '<div>{viewTableButton}</div>'
+            }
+        },
+        series: [{
+            type: 'wordcloud',
+            data: data,
+            name: 'Occurrences'
+        }],
+        title: {
+            text: '이슈 종목'
+        }
+    });    
+      
+      function search(){          
+         
+        var type_search = document.getElementById('search').value
+        
+        
+        if (type_search == ""){ 
+            $("#suggestion_box").children().remove()
+        }
+        
+        
+        $.ajax({
+                     url:'keyword',
+                     data:{ search:type_search },
+                     datatype:'JSON',
+                     success:function(data){
+                         $("#suggestion_box").children().remove()
+                         $("#suggestion_box").html(data);
+                     }
+        });  
+          
+          
+          
+        if (window.event.keyCode == 13) {
+            var type_search = document.getElementById('search').value;
+            localStorage.setItem("search", type_search); // https://www.daleseo.com/js-web-storage/
+            window.open("{% url 'index2' %}");
+        }
+      }
+    
+      
+</script>
+</body>
+
+</html>

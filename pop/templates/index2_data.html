@@ -1,0 +1,185 @@
+{% load static %}
+<link href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css" rel="stylesheet">
+<script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style type="text/css">
+.button {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 1px 16px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+
+    
+</style>
+
+<script type="text/javascript">
+      
+    $(document).ready(function(){
+        
+        param = $("#search").val();
+        gap = 'day';
+        
+        $.ajax({
+                 url:'stock_realtime',
+                     data:{ search:param  , gap:gap },
+                 datatype:'JSON',
+                 success:function(data){
+
+                     $("#graph").children().remove();
+                     $("#graph").append(data);  
+                 },error : function(data){
+                        alert("해당 종목명이 없습니다!");
+                 }
+        });
+    } );
+    
+    function graph(data){
+        
+        param = $("#search").val();
+        gap = data;
+        
+        $.ajax({
+                 url:'stock_realtime',
+                     data:{ search:param  , gap:gap },
+                 datatype:'JSON',
+                 success:function(data){
+                     $("#graph").children().remove();
+                     $("#graph").append(data);  
+                 },error : function(data){
+                        alert("해당 종목명이 없습니다!");
+                 }
+        });
+        
+    }
+    
+    
+    $(document).on('click', '.toggleBG', function () {
+        var toggleBG = $(this);
+        var toggleFG = $(this).find('.toggleFG');
+        var left = toggleFG.css('left');
+        if(left == '40px') {
+            toggleBG.css('background', '#CCCCCC');
+            toggleActionStart(toggleFG, 'TO_LEFT');
+        }else if(left == '0px') {
+            toggleBG.css('background', '#ff914c');
+            toggleActionStart(toggleFG, 'TO_RIGHT');
+        }
+    });
+
+    // 토글 버튼 이동 모션 함수
+    function toggleActionStart(toggleBtn, LR) {
+        // 0.01초 단위로 실행
+        var intervalID = setInterval(
+            function() {
+                // 버튼 이동
+                var left = parseInt(toggleBtn.css('left'));
+                left += (LR == 'TO_RIGHT') ? 5 : -5;
+                if(left >= 0 && left <= 40) {
+                    left += 'px';
+                    toggleBtn.css('left', left);
+                }
+            }, 10);
+        setTimeout(function(){
+            clearInterval(intervalID);
+        }, 201);
+    }
+    
+    
+    function getToggleBtnState(toggleBtnId){
+        const left_px = parseInt( $('#'+toggleBtnId).css('left') );
+
+        return (left_px > 0)? "on" : "off";
+    }
+
+    
+</script>
+<section id="company_info" class="featured">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-6">
+    <div class="section-title">
+      <h2>기업 정보</h2>
+        <!-- <table class="table table-bordered" id="company"> -->
+        <table id="example" class="datatable table table-striped table-bordered" style="width:100%">
+          <tr><td>시장구분</td><td>{{Market}}</td></tr>
+            <tr><td>섹터구분</td><td>{{Sector}}</td></tr>
+            <tr><td>산업구분</td><td>{{Industry}}</td></tr>
+            <tr><td>상장일</td><td>{{ListingDate}}</td></tr>
+            <tr><td>결산월</td><td>{{SettleMonth}}</td></tr>
+            <tr><td>대표이사</td><td>{{Representative}}</td></tr>
+            <tr><td>지역</td><td>{{Region}}</td></tr>
+            <tr><td>홈페이지</td><td><a href="{{HomePage}}">{{HomePage}}</a></td></tr>
+        </table>         
+    </div>
+    </div>
+    
+    <div class="col-lg-6">
+    <div class="section-title">
+      <h2>주가 정보</h2>
+        <button id="day" class="button" onclick="graph('day')">일</button>
+        <button class="button" onclick="graph('week')">주</button>
+        <button class="button" onclick="graph('month3')">3개월</button>
+        <button class="button" onclick="graph('year')">년</button>
+        <div id="graph"></div>
+        <!-- <div class='toggleBG'>
+            <button class='toggleFG'></button>
+        </div> -->
+    </div>
+    </div>    
+    </div>        
+    </div>
+</section>
+
+<section id="featured" class="featured">
+    <div class="container">
+        <div class="section-title">
+            <h2>관련 뉴스</h2>
+        
+          <table id="table" data-toggle="table" data-search="true" data-pagination="true">
+          <thead>
+            <tr>
+              <th data-sortable="true">제목</th>
+              <th data-sortable="true">게시일자</th>
+              <th data-sortable="true">게시시간</th>
+              <th data-sortable="true">언론사</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for article in articles %}
+          <tr>
+              <td>{{article.title}}</td>
+              <td>{{article.date}}</td>
+              <td>{{article.time}}</td>
+              <td>{{article.press}}</td>
+          </tr>
+          {% endfor %}
+          </tbody>
+          </table>         
+        </div>
+    </div>
+</section>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript">
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
