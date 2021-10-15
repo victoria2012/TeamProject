@@ -16,7 +16,7 @@
 
 
 
-* [결과 보고서](https://github.com/victoria2012/TeamProject/blob/master/md-images/%ED%8C%8C%EC%9D%B4%EB%84%90%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%B5%9C%EC%A2%85%EB%B3%B4%EA%B3%A0%EC%9E%90%EB%A3%8C.pdf)
+* [결과 보고서](https://github.com/victoria2012/TeamProject/blob/master/md-images/2%EC%B0%A8%EC%84%B8%EB%AF%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B2%B0%EA%B3%BC%EB%B3%B4%EA%B3%A0%EC%84%9C_POP.pdf)
 
 
 
