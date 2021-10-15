@@ -1,10 +1,10 @@
 ## <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1593397832/noticon/xmudzlguiuwsxfi3wjkj.png" width="5%;" /> 경제기사가 주가에 미치는 영향 분석
 
-> 이 자료는 멀티캠퍼스 '빅데이터 기반 지능형 서비스 개발' 과정에서 진행한 두번째 세미 프로젝트의 결과물입니다. 
+> 이 자료는 <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1619540240/noticon/urcfxoausyy60vfxv7x5.png" width="3%;" />멀티캠퍼스 '빅데이터 기반 지능형 서비스 개발' 과정에서 진행한 두번째 세미 프로젝트의 결과물입니다. 
 
 
 
-### <img src="md-images/fojlvunhpwcxxmolu8dt.svg" width="5%;" /> 팀명 : POP
+### <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png" width="5%;" /> 팀명 : POP
 
 ---
 
