@@ -16,7 +16,7 @@
 
 
 
-* [결과 보고서](https://github.com/victoria2012/TeamProject/blob/master/md-images/2%EC%B0%A8%EC%84%B8%EB%AF%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B2%B0%EA%B3%BC%EB%B3%B4%EA%B3%A0%EC%84%9C_POP.pdf)
+* [결과 보고서](https://github.com/victoria2012/TeamProject/blob/master/md-images/2%EC%B0%A8%EC%84%B8%EB%AF%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B2%B0%EA%B3%BC%EB%B3%B4%EA%B3%A0%EC%84%9C_POP.pdf)      
 
   
 
@@ -26,7 +26,7 @@
 
 ---
 
-뉴스기사 1건에 대해서 긍정 / 부정에 대해서 판단하게 하고, 특정 기간에 따라 긍정/부정 관련 기사의 갯수가 주가에 영향을 미치는가에 대한 분석
+뉴스기사 1건에 대해서 긍정 / 부정에 대해서 판단하게 하고, 특정 기간에 따라 긍정/부정 관련 기사의 갯수가 주가에 영향을 미치는가에 대한 분석  
 
 ​    
 
@@ -40,7 +40,7 @@
 
 * [정다슬](https://github.com/Ethan-Jeong) : 스크래핑, 웹서버
 
-* 주창석 : 스크래핑, 딥러닝, PM
+* 주창석 : 스크래핑, 딥러닝, PM  
 
 ​    
 
