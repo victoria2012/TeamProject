@@ -1,6 +1,6 @@
 ## <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1593397832/noticon/xmudzlguiuwsxfi3wjkj.png" width="5%;" /> 경제기사가 주가에 미치는 영향 분석
 
-> 이 자료는 <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1619540240/noticon/urcfxoausyy60vfxv7x5.png" width="3%;" />멀티캠퍼스 '빅데이터 기반 지능형 서비스 개발' 과정에서 진행한 두번째 세미 프로젝트의 결과물입니다. 
+> 이 자료는 <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1619540240/noticon/urcfxoausyy60vfxv7x5.png" width="7%;" />멀티캠퍼스 '빅데이터 기반 지능형 서비스 개발' 과정에서 진행한 두번째 세미 프로젝트의 결과물입니다. 
 
 
 
