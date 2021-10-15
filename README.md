@@ -1,10 +1,10 @@
-## <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1593397832/noticon/xmudzlguiuwsxfi3wjkj.png" alt="라이언" style="zoom:25%;" /> 경제기사가 주가에 미치는 영향 분석
+## <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1593397832/noticon/xmudzlguiuwsxfi3wjkj.png" alt="라이언" style="zoom:10%;" /> 경제기사가 주가에 미치는 영향 분석
 
 > 이 자료는 멀티캠퍼스 '빅데이터 기반 지능형 서비스 개발' 과정에서 진행한 두번째 세미 프로젝트의 결과물입니다. 
 
 
 
-### <img src="md-images/fojlvunhpwcxxmolu8dt.svg" alt="팀" style="zoom: 2%;" /> 팀명 : POP
+### <img src="md-images/fojlvunhpwcxxmolu8dt.svg" alt="팀" style="zoom: 10%;" /> 팀명 : POP
 
 ---
 
@@ -14,7 +14,7 @@
 
 
 
-* [결과 보고서]
+* [결과 보고서](https://github.com/victoria2012/TeamProject/blob/master/md-images/%ED%8C%8C%EC%9D%B4%EB%84%90%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%B5%9C%EC%A2%85%EB%B3%B4%EA%B3%A0%EC%9E%90%EB%A3%8C.pdf)
 
 
 
