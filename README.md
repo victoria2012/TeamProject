@@ -2,9 +2,11 @@
 
 > 이 자료는 멀티캠퍼스 '빅데이터 기반 지능형 서비스 개발' 과정에서 진행한 두번째 세미 프로젝트의 결과물입니다. 
 
+​    
 
 
-### <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png" width="5%;" /> 팀명 : POP
+
+### <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png" width="4%;" /> 팀명 : POP
 
 ---
 
@@ -15,6 +17,8 @@
 
 
 * [결과 보고서](https://github.com/victoria2012/TeamProject/blob/master/md-images/%ED%8C%8C%EC%9D%B4%EB%84%90%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%B5%9C%EC%A2%85%EB%B3%B4%EA%B3%A0%EC%9E%90%EB%A3%8C.pdf)
+
+
 
 
 
@@ -30,11 +34,11 @@
 
 ---
 
-* 김수원 : 스크래핑, 웹서버
+* [김수원](https://github.com/webdessin) : 스크래핑, 웹서버
 
-* 송건룡 : 스크래핑, 딥러닝
+* [송건룡](https://github.com/00FFEF) : 스크래핑, 딥러닝
 
-* 정다슬 : 스크래핑, 웹서버
+* [정다슬](https://github.com/Ethan-Jeong) : 스크래핑, 웹서버
 
 * 주창석 : 스크래핑, 딥러닝, PM
 
