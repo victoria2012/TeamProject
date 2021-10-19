@@ -12,7 +12,7 @@
 
 * [프로젝트 결과 보고서](https://github.com/victoria2012/TeamProject/blob/master/md-images/2%EC%B0%A8%EC%84%B8%EB%AF%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B2%B0%EA%B3%BC%EB%B3%B4%EA%B3%A0%EC%84%9C_POP.pdf)      
 
-
+<br><br>
 
 ### * 프로젝트 개요
 
@@ -20,7 +20,7 @@
 
 뉴스기사 1건에 대해서 긍정 / 부정에 대해서 판단하게 하고, 특정 기간에 따라 긍정/부정 관련 기사의 갯수가 주가에 영향을 미치는가에 대한 분석  
 
-  
+ <br><br>
 
 
 
@@ -31,7 +31,7 @@
 * <a href= "https://finance.naver.com/news/market_special.naver">네이버금융 > 장중특징주</a> : 뉴스 기사
 * <a href="https://financedata.github.io/posts/finance-data-reader-users-guide.html">FinanceDataReder</a> : 한국거래소 상장종목 이름, 종목코드, 코스피 및 코스닥 지수 등
 
-​          
+<br><br>     
 
 
 
@@ -47,7 +47,7 @@
 
 * 주창석 : 스크래핑, 딥러닝, PM  
 
-​      
+ <br><br>  
 
 
 
