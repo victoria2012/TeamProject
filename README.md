@@ -29,7 +29,8 @@
 ---
 
 * <a href= "https://finance.naver.com/news/market_special.naver">네이버금융 > 장중특징주</a> : 뉴스 기사
-* <a href="https://financedata.github.io/posts/finance-data-reader-users-guide.html">FinanceDataReder</a> : 한국거래소 상장종목 이름, 종목코드, 코스피 및 코스닥 지수 등
+* [네이버금융>뉴스포커스>기업 종목 분석](https://finance.naver.com/news/news_list.naver?mode=LSS3D&section_id=101&section_id2=258&section_id3=402&date=20210812) : 뉴스 기사
+* <a href="https://financedata.github.io/posts/finance-data-reader-users-guide.html">FinanceDataReder</a> : 한국거래소 상장종목 이름, 종목코드, 각 종목의 일별 시세, 코스피 및 코스닥 지수 등
 
 <br><br>     
 
@@ -59,4 +60,6 @@
 
 * <a href="https://github.com/victoria2012/TeamProject/tree/master/deeplearning">머신러닝 소개 페이지로 연결</a>
 * <a href="https://github.com/victoria2012/TeamProject/tree/master/pop">웹서버 소개 페이지로 연결</a>
+
+
 
